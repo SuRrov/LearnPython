@@ -1,0 +1,16 @@
+Cortege = (5,7,9)
+
+print(f"Кортеж: {Cortege}")
+
+Sum = 0
+Number = 1
+
+for i in Cortege:
+    print(f"{Number} число: {i}")
+    Sum+=i
+    Number+=1
+
+print(f"Сумма чисел ровна {Sum}")
+
+
+    

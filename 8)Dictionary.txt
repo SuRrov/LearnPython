@@ -1,0 +1,20 @@
+Dictionary = {}
+
+Dictionary = {'Name': 'John', 'Age': 25, 'City': 'New York'}
+print(Dictionary)
+
+Dictionary['Age'] = 26
+
+Dictionary['Email'] = 'john@example.com'
+
+CheckKey = 'Email'
+if CheckKey in Dictionary:
+    print(f"Ключ {CheckKey} присутствует")
+else:
+    print(f"Ключ {CheckKey} отсутствует")    
+
+Dictionary.pop('City',None)
+
+for Key in Dictionary:
+    Dict_Value = Dictionary[Key]
+    print(f"Ключ: {Key}, Значение: {Dict_Value}")

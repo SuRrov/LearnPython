@@ -1,0 +1,29 @@
+print ("Добрый день!")
+
+FirstList = []
+SecondList = []
+
+FirstIndex = int(input("Введите количество элементов первого списка:"))
+
+for i in range(FirstIndex):
+    Number = int(input(f"Введите {i+1} число списка:"))
+    FirstList.append(Number)
+
+
+
+SecondIndex = int(input("Введите количество элементов второго списка:"))
+
+for i in range(SecondIndex):
+    Number = int(input(f"Введите {i+1} число списка:"))
+    SecondList.append(Number)
+
+
+CheckRepit = 0
+
+for x in FirstList:
+   # print(x)
+    for y in SecondList:
+       # print(y)
+        if x == y: CheckRepit+=1
+
+print (f"Количество пересечений: {CheckRepit}")
