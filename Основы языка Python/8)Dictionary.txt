@@ -7,7 +7,7 @@ Dictionary['Age'] = 26
 
 Dictionary['Email'] = 'john@example.com'
 
-CheckKey = 'Email'
+CheckKey = 'Country'
 if CheckKey in Dictionary:
     print(f"Ключ {CheckKey} присутствует")
 else:

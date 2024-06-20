@@ -1,0 +1,9 @@
+from car import Car 
+
+Porsche = Car("Porsche","Carrera",1983) 
+Lada = Car("Lada","Granta",2011)
+BMW = Car("BMW","X5",1999)
+
+print(Car.DisplayInfo(Porsche))
+
+

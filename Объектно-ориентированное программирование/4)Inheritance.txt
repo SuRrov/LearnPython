@@ -1,0 +1,28 @@
+class Animal:
+    def __init__(self,Name,Species):
+        self.Name = Name
+        self.Species = Species
+    def Make_Sounds (self):
+        print ("Animal Sounds")
+
+class Dog (Animal):
+    def Make_Sounds (self):
+        print("Гав")
+
+class Cat(Animal):
+    def Make_Sounds (self):
+        print("Мяу")
+
+
+
+
+animal = Animal("Кеша", "Попугай")
+print(animal.Name)
+dog = Dog("Шарик", "Бульдог")
+print(dog.Name)
+cat = Cat("Дымка","Мейнкун")
+print(cat.Name)
+
+animal.Make_Sounds()
+dog.Make_Sounds()
+cat.Make_Sounds()

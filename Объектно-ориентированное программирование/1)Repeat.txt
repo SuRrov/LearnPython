@@ -1,0 +1,13 @@
+Car = {'Mark': 'Toyota','Model': 'Camry','Age': 1982}
+
+Car['Color'] = 'Black'
+
+print(f"Словарь: {Car['Mark']}")
+
+Fruits=['Blackberry','Coconut','Kiwifruit','Lime','Mango']
+
+print(f"Список: {Fruits[0]}")
+
+Cortege = (5,7,9,12,15,23)
+
+print(f"Кортеж: {Cortege[-1]}")

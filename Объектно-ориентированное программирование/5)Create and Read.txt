@@ -1,0 +1,6 @@
+File = open ('sample.txt','w')
+File.write("Hello World")
+File = open ("sample.txt")
+ReadFile = File.read()
+print(ReadFile)
+File.close

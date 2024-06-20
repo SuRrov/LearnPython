@@ -1,0 +1,9 @@
+class Car:
+    def __init__(self,Brand,Model,Year):
+        self.Brand = Brand
+        self.Model = Model
+        self.Year = Year
+    
+    def DisplayInfo(self):
+        return (f"Автомобиль Марки {self.Brand}, Модель {self.Model}, {self.Year} года выпуска")
+        
