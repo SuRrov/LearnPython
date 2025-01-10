@@ -1,0 +1,20 @@
+#Импорт библиотек и иниализация Телеграмм Бота 
+import random
+import telebot  
+TOKEN = ""
+bot = telebot.TeleBot(TOKEN)
+
+#Хендлен с регулярным выражением "Random" отправляет случайное число в диапазоне от 0 до 100 
+@bot.message_handler(regexp=("random"),content_types=["text"])
+def get_messages (messages):
+        
+    bot.send_message(messages.from_user.id, "Случайное число: "+ str(random.randint(0,100)))    
+
+#Хендлер дублирующий входящий текст, при отсутствии регулярного выражения "Random"
+@bot.message_handler(content_types=["text"])
+def get_messages (messages):
+        
+    bot.send_message(messages.from_user.id, messages.text)   
+
+#Постоянное обновление бота в поисках входящих сообщений
+bot.polling(non_stop=True, interval=0)

@@ -1,0 +1,22 @@
+#Импорт библиотек и иниализация Телеграмм Бота 
+import telebot  
+TOKEN = ""
+bot = telebot.TeleBot(TOKEN)
+    
+#Хендлер преобразующий сообщение пользователя в опрос и варианты ответа на этот опрос
+@bot.message_handler(content_types=["text"])
+def poll(messages):
+    #Разбиение сообщения пользователя на список, где разделителем является /n
+    lst = messages.text.split("\n")
+    #Проверка корректности ввода
+    if len(lst) > 3 and len(lst) < 11:
+        #Вычлинение вопроса из общего списка.
+        questions = lst.pop(0)
+        # Отправляем опрос в чат
+        bot.send_poll (messages.from_user.id, questions, lst, 
+                    is_anonymous=False, allows_multiple_answers=True)
+    else:
+        bot.send_message(messages.from_user.id,"Неверные данные")
+    
+#Постоянное обновление бота в поисках входящих сообщений
+bot.polling(non_stop=True, interval=0)

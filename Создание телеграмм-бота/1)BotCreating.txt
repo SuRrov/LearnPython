@@ -1,0 +1,14 @@
+import telebot  
+
+TOKEN = ""
+
+bot = telebot.TeleBot(TOKEN)
+
+@bot.message_handler(content_types=["text"])
+
+
+def get_messages (messages):
+        
+    bot.send_message(messages.from_user.id, messages.text*10)    
+
+bot.polling(non_stop=True, interval=0)
